@@ -14,9 +14,8 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Exécuter le script Python
+      - name: Vérifier que le script fonctionne
         run: python app.py
 
       - name: Construire l'image Docker
         run: docker build -t monprojet-devops .
-
