@@ -1,4 +1,4 @@
-name: Python CI
+name: Python CI + Docker Build
 
 on: [push]
 
@@ -14,6 +14,9 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Vérifier que le script fonctionne
+      - name: Exécuter le script Python
         run: python app.py
+
+      - name: Construire l'image Docker
+        run: docker build -t monprojet-devops .
 
